@@ -1,75 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>aisakov</title>
+    <meta charset = 'utf-8'>
+    <meta name = 'viewport' content = 'width = device-width, initial-scale = 1'>
+    <link rel = 'stylesheet' href = 'style.css'>
+    <title>Мои Заметки</title>
 
+    <script src = 'script.js' defer></script>
 </head>
 
-<body>
-    <div class="wrapper">
-        <div class="menu">
-            <h1>
-                Мои заметки
-            </h1>
-            <button>
-                Новая заметка
-            </button>
-            <h2>Теги</h2>
-            <div class="tegs_mini">Все</div>
-            <div class="tegs_mini">Идеи</div>
-            <div class="tegs_mini">Личное</div>
-            <div class="tegs_mini">Работа</div>
-            <div class="tegs_mini">Список покупок</div>
-        </div>
-        <div class="content">
-
-            <div class="search">
-                <input type="text" class="poisk" placeholder="поиск">
-                <button class="lupa"></button>
-            </div>
-            <div class="content-wrapper">
-                <div class="zadachi">
-                    <div class="zadachi_item">
-                        <div class="item-verh">
-                            <span>Tittle</span>
-                            <span>work</span>
-                        </div>
-                        <div class="item-niz">
-                            <span>23 июля 2024</span>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="zadachi">
-                    <div class="zadachi_item">
-                        <div class="item-verh">
-                            <span>Tittle</span>
-                            <span>work</span>
-                        </div>
-                        <div class="item-niz">
-                            <span>23 июля 2024</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="zadachi">
-                    <div class="zadachi_item">
-                        <div class="item-verh">
-                            <span>Tittle</span>
-                            <span>work</span>
-                        </div>
-                        <div class="item-niz">
-                            <span>23 июля 2024</span>
-                        </div>
-                    </div>
-                </div>
+<body class = 'body'>
+    <div class = 'main'>
+        
+        <div class = 'left_bar'>
+            <span class = 'title'>Мои Заметки</span>
+            <button class = 'new_note_button' id = 'new_note_button'>Новая Заметка</button>
+            
+            <div class = 'tags_container' id = 'tags_container'>
+                <span class = 'title_tags' id = 'title_tags'>Теги</span>
+                <button class = 'tags_item' id = 'tags_item'>Все</button>
+                <button class = 'tags_item' id = 'tags_item'>Идеи</button>
+                <button class = 'tags_item' id = 'tags_item'>Личное</button>
+                <button class = 'tags_item' id = 'tags_item'>Работа</button>
             </div>
         </div>
+
+        <div class = 'main_bar'>
+            
+            <div class = 'poisk' id = 'poisk'>
+                <input class = 'note_input' type = 'text' placeholder = 'Поиск' id = 'note_input'>
+                <button class = 'lupa' id = 'lupa'>
+                </button>
+            </div>
+
+            <div class = 'notes_container' id = 'notes_container'>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <div class = 'modal_window' id = 'modal_window'>
+        <div class = 'modal_content' id = 'modal_content'>
+            <span class = 'modal_title'>Новая Заметка</span>
+            <input class = 'modal_input' id = 'modal_input' placeholder = 'Название заметки'></input>
+            <select class = 'modal_dropdown' id = 'modal_dropdown'>
+                <option value = '1'>Все</option>
+                <option value = '2'>Идеи</option>
+                <option value = '3'>Личное</option>
+                <option value = '4'>Работа</option>
+            </select>
+            <button class = 'modal_button' id = 'modal_button'>Создать</button>
+        </div>
+    </div>
 </body>
-
 </html>
